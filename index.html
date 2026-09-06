@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Special Question 💖</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 80px;
+      margin: 0;
+    }
+
+    h2 {
+      color: #d63384;
+      font-size: 35px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+
+    button {
+      padding: 15px 35px;
+      font-size: 22px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      margin: 15px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .oo {
+      background: linear-gradient(45deg, #ff4081, #f50057);
+      color: white;
+      box-shadow: 0 4px 15px #ff408170;
+    }
+    .oo:hover { transform: scale(1.15); }
+
+    .hindi {
+      background: linear-gradient(45deg, #b0bec5, #78909c);
+      color: white;
+    }
+    .hindi:hover { transform: scale(0.95); }
+
+    #result {
+      font-size: 27px;
+      margin-top: 40px;
+      font-weight: bold;
+      color: #c2185b;
+    }
+
+    
+    #popupBox {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(135deg, #ff4081, #f8bbd0, #f50057);
+      color: white;
+      padding: 40px 50px;
+      border-radius: 25px;
+      font-size: 24px;
+      font-weight: bold;
+      box-shadow: 0 0 30px #ff408190;
+      z-index: 99;
+      max-width: 80%;
+    }
+
+    #closePop {
+      margin-top: 25px;
+      padding: 10px 30px;
+      background: white;
+      color: #d63384;
+      border-radius: 30px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    #closePop:hover { background: #ffe0ec; }
+
+    #darkBg {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+      z-index: 98;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Do you love me? 💖</h2>
+
+  <p>
+    <button class="oo" onclick="sagotOo()">YES ❤️</button>
+    <button class="hindi" onclick="sagotHindi()">NO 💔</button>
+  </p>
+
+  <p id="result"></p>
+
+ 
+  <div id="darkBg"></div>
+  <div id="popupBox">
+    <div id="popText"></div>
+    <button id="closePop" onclick="isaraNa()">Got it ❤️</button>
+  </div>
+
+<script>
+function bukasPop(mensahe){
+  document.getElementById("popText").innerText = mensahe;
+  document.getElementById("darkBg").style.display = "block";
+  document.getElementById("popupBox").style.display = "block";
+}
+function isaraNa(){
+  document.getElementById("darkBg").style.display = "none";
+  document.getElementById("popupBox").style.display = "none";
+}
+
+function sagotOo(){
+  document.getElementById("result").innerHTML
+  = "ayyyyiiieee! I love you MORE forever 😊😍 Papedtayan ko!";
+  bukasPop("Ayyyyyyieeeeeeee💋💋💋 💙💙💙");
+}
+
+function sagotHindi(){
+  document.getElementById("result").innerHTML
+  = "Hala 😢 sigurado ka ba talaga...? sge ok lng naman saken😔";
+  bukasPop("okey lang  :🥺🥺🥺🥺");
+}
+</script>
+
+</body>
+</html>
